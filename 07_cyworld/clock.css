@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Pixelify+Sans:wght@400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 13px;
+  font-family: "Instrument Serif", serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100vh;
+  background: #fff;
+}
+
+.clock-container {
+  width: 310px;
+  height: 310px;
+  border: 1px solid #fff;
+  box-shadow: 1px 1px 15px rgba(0, 68, 255, 0.8);
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+}
+.clock-container .number {
+  position: absolute;
+  font-size: 2rem;
+}
+.clock-container .number#num3 {
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+.clock-container .number#num6 {
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+}
+.clock-container .number#num9 {
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+.clock-container .number#num12 {
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+}
+.clock-container #dot {
+  width: 14px;
+  height: 14px;
+  background: #454545;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 2;
+}
+.clock-container #hour {
+  width: 7px;
+  height: 60px;
+  background: #454545;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  transform: translate(-50%, -50%);
+  transform-origin: center bottom;
+}
+.clock-container #minute {
+  width: 2px;
+  height: 95px;
+  background: #454545;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -95px;
+  transform: translate(-50%, -50%);
+  transform-origin: center bottom;
+}
+.clock-container #second {
+  width: 2px;
+  height: 80px;
+  background-color: rgba(0, 68, 255, 0.8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -80px;
+  transform: translate(-50%, -50%);
+  transform-origin: center bottom;
+}
+
+.digital-clock {
+  font-size: 1.4rem;
+  color: rgba(0, 68, 255, 0.8);
+  margin-top: 10px;
+}

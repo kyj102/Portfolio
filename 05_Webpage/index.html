@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      defer
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      defer
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <!-- slick slider -->
+    <link rel="stylesheet" href="./slick/slick.css" />
+    <link rel="stylesheet" href="./slick/slick-theme.css" />
+    <script defer src="./slick/slick.min.js"></script>
+    <!-- scrollTo -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js"
+    ></script>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/3f2ea24883.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom css & js -->
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+    <title>05_webPage</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- banner:상단부 검은색 바 부분 -->
+        <div class="banner">
+          <ul class="lnb">
+            <li>
+              <a href="#none">회원가입</a>
+            </li>
+            <li>
+              
+              <a href="#none">로그인</a>
+            </li>
+            <li>
+              <a href="#none"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+          </ul>
+        </div>
+        <nav>
+          <div class="logo">
+            <a href="#none">
+              <img src="./img/full logo.png" alt="logo" />
+            </a>
+          </div>
+          
+          <ul class="gnb">
+            <li><a href="#">관람/참여</a></li>
+            <li><a href="#about">전시</a></li>
+            <li><a href="#ranking">교육</a></li>
+            <li><a href="#testimonial">소장품</a></li>
+            <li><a href="#blog">미술연구</a></li>
+            <li><a href="#digital">디지털미술관</a></li>
+          </ul>
+        </nav>
+        <!-- 모바일에서 우측상단 햄버거버튼 -->
+        <div class="trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+      <main class="intro">
+        <!-- inner:바깥의 전체 너비값에 비례해서 heading의 너비값이 한번에 같이 움직일 수 있게끔 만들어준, 전체너비를 맞춰주는 박스구조 -->
+        <div class="inner">
+          <div class="heading">
+            <h1>사물은 어떤 꿈을 꾸는가</h1>
+            <p>
+              전시기간 : 2024-05-17 ~ 2024-09-18
+            </p>
+            <button class="slide_btn">전시예약 바로가기</button>
+          </div>
+        </div>
+      </main>
+      <!-- id선택자 따로주는이유 = 상단 헤더 gnb 눌렀을때 해당 영역으로 바로 넘어갈수있도록 -->
+      <section id="about" class="about">
+        <div class="inner">
+          <div class="about_content">
+            <div class="desc">
+              <h2>국립현대미술관 소개</h2>
+              <span>도시와 역사와 동시 역사미술이 호흡하는 공간</span>
+              <p>
+                분야에서 문장 차지하는 전에 결과물에 때 분야에서 지칭하는 용도로 그래픽 시각적 실제적인 시각 로렘 시각 연출을 같은 때 사용할 디자인 디자인 시각적 실제적인 로렘 그래픽 레이아웃 때로 사용할 결과물에 로렘 폰트, 때로 보여줄 입숨은 사용할 표준 프로젝트 디자인 채움 부르며, 때로 이런 무언가를 무언가를 이용된다. 레이아웃 무언가를 용도로 디자인 입숨은 분야에서 시각 분야에서 문장 차지하는 전에 결과물에 때 분야에서 지칭하는 용도로 그래픽 시각적 실제적인 시각 로렘 시각 연출을 같은 때 사용할 디자인 디자인 시각적 실제적인 로렘 그래픽 레이아웃 때로 사용할 결과물에 로렘 폰트, 때로 보여줄 입숨은 사용할 표준 프로젝트 디자인 채움 부르며, 때로 이런 무언가를 무언가를 이용된다. 
+              </p>
+              <a href="#none">현재 진행중인 전시 보러가기</a>
+            </div>
+            <div class="photo">
+              <img src="./img/museum.jpeg" alt="museum" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ranking" class="ranking">
+        <!-- inner라는 div클래스가 레이아웃그리드 역할을 해줌 -->
+        <div class="inner">
+          <div class="ranking_content">
+            <h2>여름에 보기 좋은 국내 전시회 3선</h2>
+            <div class="items">
+              <div class="item">
+                <div class="up-image">
+                  <img src="./img/poster1.jpg" alt="poster01" />
+                </div>
+                <div class="down-desc">
+                  <span class="badge must">서울</span>
+                  <h3>연결하는 집: 대안적 삶을 위한 건축</h3>
+                  <p>
+                    2024.07.19 ~ 2025.02.02
+                  </p>
+                  <a class="btn-explore" href="#none"
+                    >전시 바로가기 <img src="./img/icon-arrow.png" alt="arrow"
+                    /></a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="up-image">
+                  <img src="./img/poster2.png" alt="poster02" />
+                </div>
+                <div class="down-desc">
+                  <span class="badge must">청주</span>
+                  <h3>보이는 수장고: 유영국</h3>
+                  <p>
+                    2024.07.19 ~ 2025.02.02
+                  </p>
+                  <a class="btn-explore" href="#none"
+                    >전시 바로가기 <img src="./img/icon-arrow.png" alt="arrow"
+                  /></a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="up-image">
+                  <img src="./img/poster3.png" alt="poster03" />
+                </div>
+                <div class="down-desc">
+                  <span class="badge must">과천</span>
+                  <h3>자연과 인간: 로맨스부터 호러까지</h3>
+                  <p>
+                    2024.07.19 ~ 2025.02.02
+                  </p>
+                  <a class="btn-explore" href="#none"
+                    >전시 바로가기 <img src="./img/icon-arrow.png" alt="arrow"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="testimonial" class="testimonial">
+        <div class="inner">
+          <div class="testimonial_content">
+            <h2>작품과 함께하는 <b>작가의 말</b></h2>
+            <hr />
+            <div class="myslider">
+              <div>
+                <p class="client">
+                  <img src="./img/client-01.jpg" alt="client01" />
+                  <span> <b>Coding Works</b>Seoul, Korea </span>
+                </p>
+                <p class="comment">
+                  디자인 그리킹이라고도 프로젝트 그래픽 문장 사용할 공간만 사용된다. 출판이나 출판이나 연출을 채워지기 채우기 글로도 시각 입숨은 시각 로렘 요소나 때 지칭하는 로렘 출판이나 전에 최종 그리킹이라고도 글로도 사용할 전에 이런 텍스트로, 무언가를 사용하는 그래픽 사용하는 텍스트로, 같은 
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./img/client-02.jpg" alt="client02" />
+                  <span> <b>Kate Whitney</b>LosAngeles, US </span>
+                </p>
+                <p class="comment">
+                  디자인 그리킹이라고도 프로젝트 그래픽 문장 사용할 공간만 사용된다. 출판이나 출판이나 연출을 채워지기 채우기 글로도 시각 입숨은 시각 로렘 요소나 때 지칭하는 로렘 출판이나 전에 최종 그리킹이라고도 글로도 사용할 전에 이런 텍스트로, 무언가를 사용하는 그래픽 사용하는 텍스트로, 같은 
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./img/client-03.jpg" alt="client03" />
+                  <span> <b>Kelly Muvils</b>New York, US </span>
+                </p>
+                <p class="comment">
+                  디자인 그리킹이라고도 프로젝트 그래픽 문장 사용할 공간만 사용된다. 출판이나 출판이나 연출을 채워지기 채우기 글로도 시각 입숨은 시각 로렘 요소나 때 지칭하는 로렘 출판이나 전에 최종 그리킹이라고도 글로도 사용할 전에 이런 텍스트로, 무언가를 사용하는 그래픽 사용하는 텍스트로, 같은 
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./img/client-04.jpg" alt="client04" />
+                  <span> <b>Oliver</b>Califonia, US </span>
+                </p>
+                <p class="comment">
+                  디자인 그리킹이라고도 프로젝트 그래픽 문장 사용할 공간만 사용된다. 출판이나 출판이나 연출을 채워지기 채우기 글로도 시각 입숨은 시각 로렘 요소나 때 지칭하는 로렘 출판이나 전에 최종 그리킹이라고도 글로도 사용할 전에 이런 텍스트로, 무언가를 사용하는 그래픽 사용하는 텍스트로, 같은 
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./img/client-05.jpg" alt="client05" />
+                  <span> <b>Sophia</b>London, UK </span>
+                </p>
+                <p class="comment">
+                  디자인 그리킹이라고도 프로젝트 그래픽 문장 사용할 공간만 사용된다. 출판이나 출판이나 연출을 채워지기 채우기 글로도 시각 입숨은 시각 로렘 요소나 때 지칭하는 로렘 출판이나 전에 최종 그리킹이라고도 글로도 사용할 전에 이런 텍스트로, 무언가를 사용하는 그래픽 사용하는 텍스트로, 같은 
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./img/client-06.jpg" alt="client06" />
+                  <span> <b>Charlotte</b>Washington, US </span>
+                </p>
+                <p class="comment">
+                  디자인 그리킹이라고도 프로젝트 그래픽 문장 사용할 공간만 사용된다. 출판이나 출판이나 연출을 채워지기 채우기 글로도 시각 입숨은 시각 로렘 요소나 때 지칭하는 로렘 출판이나 전에 최종 그리킹이라고도 글로도 사용할 전에 이런 텍스트로, 무언가를 사용하는 그래픽 사용하는 텍스트로, 같은 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="callaction">
+        <div class="callaction_heading">
+          <h2>
+            <b>한국미술 연구<br />온라인 플랫폼</b>
+          </h2>
+          <span>Online Platform for<br />Korean Art Research</span>
+          <!-- <a href="#none">get early access</a> -->
+        </div>
+      </section>
+      <section id="blog" class="blog">
+        <div class="inner">
+          <div class="blog_content">
+            <div class="blog_header">
+              <!-- <h6>feature article</h6> -->
+              <h2>MMCA 뉴스레터</h2>
+              <!-- <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae dolorum nulla ex nemo, est sed possimus optio.
+              </p>
+              <a class="btn-explore" href="#none"
+                >Read More <img src="./img/icon-arrow.png" alt="arrow"
+              /></a> -->
+            </div>
+            <!-- <hr class="divider" /> -->
+            <div class="post_content">
+              <div class="recent_post_items">
+                <h6>전시 이벤트</h6>
+                <div class="post_item">
+                  <div class="post_image">
+                    <!-- <img src="./img/recent_01.png" alt="recent01" /> -->
+                  </div>
+                  <div class="post_desc">
+                    <h3>포커스</h3>
+                    <p>
+                      집, 사람들의 이야기 [연결하는 집: 대안적 삶을 위한 건축]
+                      <span>July 16, 2024</span>
+                    </p>
+                  </div>
+                </div>
+                <!-- <hr class="divider" /> -->
+                <div class="post_item">
+                  <div class="post_image">
+                    <!-- <img src="./img/recent_02.png" alt="recent02" /> -->
+                  </div>
+                  <div class="post_desc">
+                    <h3>미술관 플러스</h3>
+                    <p>
+                      360도로 펼펴지는 가상현실에 입장하다 [MMCA VR-자수전]
+                      <span>July 16, 2024</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="shared_post_items">
+                <h6>미술관 플러스</h6>
+                <div class="post_item">
+                  <div class="post_image">
+                    <img src="./img/recent_03.png" alt="recent03" />
+                  </div>
+                  <div class="post_desc">
+                    <h3>미술관 플러스</h3>
+                    <p>
+                      무장애 미술관, 국립현대미술관의 '배리어프리'
+                      <span>July 16, 2024</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="post_item">
+                  <div class="post_image">
+                    <img src="./img/recent_04.png" alt="recent04" />
+                  </div>
+                  <div class="post_desc">
+                    <h3>미술관 플러스</h3>
+                    <p>
+                      미술관에서 발견한 여름맞이 상품으로 무더위를 이겨내세요!
+                      <span>July 16, 2024</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="festival">
+        <div class="festival_heading">
+          <h3><span>SEE ALL FESTIVALS</span> for the Best Trip Place</h3>
+          <div class="btns">
+            <a href="#none">Mexico Festivals</a>
+            <a href="#none">Barcelona Festivals</a>
+          </div>
+        </div>
+      </section> -->
+      <!-- center Slider -->
+<div class="center">
+        <div>
+          <p class="artSelection">
+            <img src="./img/art01.png" alt="artS01" />
+            <span> <b>특별수장고 : 국립현대미술관 드로잉소장품</b> </span>
+          </p>
+          <p class="artComment">
+            2023.12.14 ~ 2024.07.31
+          </p>
+        </div>
+        <div>
+          <p class="artSelection">
+            <img src="./img/art02.png" alt="artS02" />
+            <span> <b>가변하는 소장품</b> </span>
+          </p>
+          <p class="artComment">
+            2023.12.14 ~ 2024.07.31
+          </p>
+        </div>
+        <div>
+          <p class="artSelection">
+            <img src="./img/art03.png" alt="artS03" />
+            <span> <b>보이는 수장고 : MMCA 이건희컬렉션 해외명작전</b> </span>
+          </p>
+          <p class="artComment">
+            2023.12.14 ~ 2024.07.31
+          </p>
+        </div>
+        <div>
+          <p class="artSelection">
+            <img src="./img/art01.png" alt="artS01" />
+            <span> <b>특별수장고 : 국립현대미술관 드로잉소장품</b> </span>
+          </p>
+          <p class="artComment">
+            2023.12.14 ~ 2024.07.31
+          </p>
+        </div>
+        <div>
+          <p class="artSelection">
+            <img src="./img/art04.png" alt="artS04" />
+            <span> <b>2024년 상반기 입주작가전 : 노래하는 몸짓</b> </span>
+          </p>
+          <p class="artComment">
+            2023.12.14 ~ 2024.07.31
+          </p>
+        </div>
+        <div>
+          <p class="artSelection">
+            <img src="./img/art05.png" alt="artS05" />
+            <span> <b>MMCA 예술놀이마당</b> </span>
+          </p>
+          <p class="artComment">
+            2023.12.14 ~ 2024.07.31
+          </p>
+        </div>
+        <div>
+          <p class="artSelection">
+            <img src="./img/art06.png" alt="artS06" />
+            <span> <b>한국의 기하학적 추상미술</b> </span>
+          </p>
+          <p class="artComment">
+            2023.12.14 ~ 2024.07.31
+          </p>
+        </div>
+</div>
+      <footer>
+        <div class="inner">
+          <div class="footer_content">
+            <ul class="community">
+              <li>개인정보처리방침</li>
+              <li><a href="#none">이용약관</a></li>
+              <li><a href="#none">저작권정책</a></li>
+              <li><a href="#none">국민신문고</a></li>
+              <li><a href="#none">정보공개</a></li>
+            </ul>
+            <ul class="network">
+              <li>미술관 소개</li>
+              <li><a href="#none">새소식</a></li>
+              <li><a href="#none">채용</a></li>
+              <li><a href="#none">보도자료</a></li>
+              <li><a href="#none">자주 묻는 질문</a></li>
+            </ul>
+            <ul class="help">
+              <li>Help Preserve This Project</li>
+              <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+              <li>Copyright 2024 EZEN. All rights reserved.</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <a class="gototop" href="#">
+      <i class="fa-solid fa-chevron-up"></i>
+    </a>
+  </body>
+</html>

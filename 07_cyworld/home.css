@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Pixelify+Sans:wght@400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper .wrapper_header {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.wrapper .content_title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wrapper .content_title .title {
+  color: rgba(0, 68, 255, 0.8);
+  font-family: "Instrument Serif", serif;
+}
+.wrapper .content_title .subtitle {
+  font: normal 14px "arial";
+  letter-spacing: -0.9px;
+}
+.wrapper .divideLine {
+  width: 100%;
+  border-top: 1px solid #808080;
+  margin: 4px;
+}
+.wrapper .contents_body {
+  width: 100%;
+  height: 100vh;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .diaryText {
+  width: 100%;
+  height: 45px; /* 고정 높이 */
+  overflow-y: auto; /* Y 스크롤 설정 */
+  font-size: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* 패딩 포함 */
+}
+.wrapper .diary {
+  width: 100%;
+  display: flex;
+  padding: 5px 0;
+  gap: 10px;
+  font-size: 12px;
+}
+.wrapper .diary input {
+  font-size: 12px;
+}
+.wrapper #todayDiarySubmit {
+  background: #fff;
+  color: rgba(0, 68, 255, 0.8);
+  padding: 5px;
+  border: 1px solid rgba(0, 68, 255, 0.8);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.wrapper #todayDiarySubmit:hover {
+  background: rgba(0, 68, 255, 0.8);
+  color: #fff;
+  border: 1px solid transparent;
+}
+.wrapper .wrapper_body {
+  width: 100%;
+  height: 260px;
+}
+.wrapper .wrapper_body .video {
+  width: 100%;
+  height: 240px;
+  background: url("./contents/robot2.jpg") center/cover no-repeat;
+  margin-top: 10px;
+}

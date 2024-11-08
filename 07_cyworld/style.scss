@@ -1,0 +1,180 @@
+// built-in
+$color: (
+  bg-darkcolor: #000,
+  bg-lightcolor: #fff,
+  bg-graycolor: #808080,
+  accent-color: #dc143c,
+  theme-color: #0044ffcc,
+);
+
+$size: 14px;
+
+// reset
+@import "./reset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Pixelify+Sans:wght@400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+// common
+.background {
+  width: 100%;
+  height: 100vh;
+  background: url("./contents/bg_5.jpg") left/contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .outerbox {
+    width: 808px;
+    height: 544px;
+    // background: url("./contents/outerbox.png") center/cover no-repeat;
+    background: #fff;
+    box-shadow: 10px 5px 30px rgb(20, 74, 225, 0.8);
+    border-radius: 20px;
+    position: relative;
+    .wrapper {
+      display: flex;
+      padding: 36px;
+    }
+  }
+}
+
+// wrapper_left
+.wrapper_left {
+  width: 203px;
+  height: 472px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: "Instrument Serif", serif;
+  .wrapper_left_header {
+    width: 100%;
+    height: 30px;
+    font-size: $size;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    .today-value {
+      color: map-get($map: $color, $key: accent-color);
+    }
+  }
+  .wrapper_left_body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid map-get($map: $color, $key: bg-graycolor);
+    border-radius: 15px;
+    padding: 18px;
+    .left_body_header {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      .left_body_header_gray {
+        width: 148px;
+        height: 148px;
+        border-radius: 50%;
+        background: url("./contents/user.jpg") center/cover no-repeat;
+        box-shadow: 1px 1px 10px #0044ff;
+      }
+      .left_body_header_line {
+        border-top: 1px dotted map-get($map: $color, $key: bg-darkcolor);
+        margin: 12px 0;
+        width: 90%;
+      }
+    }
+    .left_body_profile {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .profile_detail {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        span {
+          font-weight: bold;
+        }
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+    .left_body_footer {
+      .wrapper_feel {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        .feel_title {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+// wrapper_right
+.wrapper_right {
+  width: 524px;
+  height: 472px;
+  padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-family: "Instrument Serif", serif;
+  font-weight: 600;
+  .wrapper_right_header {
+    display: flex;
+    justify-content: space-between;
+    color: map-get($map: $color, $key: theme-color);
+    .right_header_title {
+      font-weight: bold;
+    }
+    .right_header {
+      font-size: $size;
+    }
+  }
+  .wrapper_right_body {
+    width: 100%;
+    height: 445px;
+    border: 1px solid map-get($map: $color, $key: bg-graycolor);
+    border-radius: $size / 2;
+    background: map-get($map: $color, $key: bg-lightcolor);
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: $size / 2;
+    }
+  }
+}
+
+// Navigation
+.navigation {
+  width: 70px;
+  height: 110px;
+  position: absolute;
+  top: 20%;
+  right: -69px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3px;
+  .navigtion_item {
+    width: 100%;
+    height: 33px;
+    background: map-get($map: $color, $key: theme-color);
+    color: map-get($map: $color, $key: bg-lightcolor);
+    text-align: center;
+    line-height: 30px;
+    border-radius: 0 10px 10px 0;
+    font-size: $size;
+    border: 1px solid map-get($map: $color, $key: bg-darkcolor);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+.tab-inner {
+  position: relative;
+  height: 100vh;
+
+  input[type="radio"] {
+    display: none;
+    &#tab1:checked ~ .tabs .items {
+      left: 0;
+    }
+    &#tab2:checked ~ .tabs .items {
+      left: -100%;
+    }
+    &#tab3:checked ~ .tabs .items {
+      left: -200%;
+    }
+    &#tab1:checked ~ .tabs .items div:nth-child(1) h1 {
+      transform: translateY(200px);
+      opacity: 1;
+    }
+    &#tab2:checked ~ .tabs .items div:nth-child(2) h1 {
+      transform: translateY(200px);
+      opacity: 1;
+    }
+    &#tab3:checked ~ .tabs .items div:nth-child(3) h1 {
+      transform: translateY(200px);
+      opacity: 1;
+    }
+
+    &#tab1:checked ~ .tabs .items div:nth-child(1) p {
+      transform: translateY(-400px);
+      opacity: 1;
+    }
+
+    &#tab2:checked ~ .tabs .items div:nth-child(2) p {
+      transform: translateY(-400px);
+      opacity: 1;
+    }
+
+    &#tab3:checked ~ .tabs .items div:nth-child(3) p {
+      transform: translateY(-400px);
+      opacity: 1;
+    }
+
+    &#tab1:checked ~ .btn label[for="tab1"] {
+      color: crimson;
+      font-weight: 700;
+    }
+    &#tab2:checked ~ .btn label[for="tab2"] {
+      color: royalblue;
+      font-weight: 700;
+    }
+    &#tab3:checked ~ .btn label[for="tab3"] {
+      color: #828282;
+      font-weight: 700;
+    }
+  }
+  .tabs {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    .items {
+      display: flex;
+      width: 300%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.5s;
+      div {
+        width: 33.33%;
+        height: 100vh;
+        position: relative;
+        &:nth-child(1) {
+          background: url("./img/sun.jpg") center/cover no-repeat;
+        }
+        &:nth-child(2) {
+          background: url("./img/earth.jpg") center/cover no-repeat;
+        }
+        &:nth-child(3) {
+          background: url("./img/moon.jpg") center/cover no-repeat;
+        }
+        &:nth-child(1)::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(135deg, #e0544a, transparent);
+        }
+        &:nth-child(2)::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(135deg, royalblue, transparent);
+        }
+        &:nth-child(3)::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(135deg, #a1a1a1, transparent);
+        }
+        h1 {
+          position: relative;
+          font-size: 120px;
+          color: #fff;
+          text-align: center;
+          opacity: 0;
+          transform: translateY(-200px);
+          transition: 0.5s;
+          transition-delay: 0.5s;
+        }
+        p {
+          width: 600px;
+          height: 100vh;
+          position: absolute;
+          top: 50%;
+          left: 28%;
+          padding-top: 400px;
+          text-align: center;
+          color: #fff;
+          font-weight: 200;
+          opacity: 0;
+          transform: translateY(400px);
+          transition: 0.5s;
+          transition-delay: 0.5s;
+        }
+      }
+    }
+  }
+  .btn {
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    label {
+      color: #fff;
+      margin: 0 15px;
+      cursor: pointer;
+    }
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      position: absolute;
+      bottom: 5%;
+      left: 47%;
+      filter: invert(100%);
+    }
+  }
+}

@@ -1,0 +1,112 @@
+// reset
+@import "./reset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Pixelify+Sans:wght@400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+// built-in
+$color: (
+  bg-darkcolor: #000,
+  bg-lightcolor: #fff,
+  bg-graycolor: #808080,
+  accent-color: #dc143c,
+  theme-color: #0044ffcc,
+);
+
+$size: 14px;
+
+//home이라는 요소는 index의 iframe안에 들어간다.
+// iframe창의 높이,너비값을 전체로 사용해주기 위해
+// home.scss에서 높이,너비를 100%로 설정해줘야 한다.
+
+// common
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+// home
+.wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .wrapper_header {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .content_title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .title {
+      color: map-get($map: $color, $key: theme-color);
+      font-family: "Instrument Serif", serif;
+    }
+    .subtitle {
+      font: normal $size/1 "arial";
+      letter-spacing: -0.9px;
+    }
+  }
+  .divideLine {
+    width: 100%;
+    border-top: 1px solid map-get($map: $color, $key: bg-graycolor);
+    margin: 4px;
+  }
+  .contents_body {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    // padding-bottom: 10px;
+}
+.diaryText {
+    width: 100%;
+    height: 45px; /* 고정 높이 */
+    overflow-y: auto; /* Y 스크롤 설정 */
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* 패딩 포함 */
+}
+.diary {
+    width: 100%;
+    display: flex;
+    padding: 5px 0;
+    gap: 10px;
+    font-size: 12px;
+    input {
+      font-size: 12px;
+    }
+  }
+#todayDiarySubmit {
+  background: map-get($map: $color, $key: bg-lightcolor);
+  color: map-get($map: $color, $key: theme-color);
+  padding: 5px;
+  border: 1px solid map-get($map: $color, $key: theme-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background: map-get($map: $color, $key: theme-color);
+    color: map-get($map: $color, $key: bg-lightcolor);
+    border: 1px solid transparent;
+  }
+}
+
+  .wrapper_body {
+    width: 100%;
+    height: 260px;
+    .video {
+      width: 100%;
+      height: 240px;
+      background: url("./contents/robot2.jpg") center/cover no-repeat;
+      margin-top: 10px;
+    }
+  }
+}
